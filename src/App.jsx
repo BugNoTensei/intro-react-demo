@@ -3,25 +3,21 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css';
 
+const Selfintroduction = ({ name = "unknown", date0fbirth, hobbies }) => {
+  return (
+    <div>
+      <h1>"My name is {name}!"</h1>
+      {date0fbirth ? <h2>I was born in {date0fbirth}</h2> : null}
+      {hobbies.join("")}
+    </div>
+  );
+};
+
 function App() {
   return (
     <div className='App'>
-      <h1>Hello</h1>
-      {/* 1. HTML as JSX element */}
-      <div />
-      {/* ---------- */}
-      {/* 2. JSX element with text */}
-      <div>child</div>
-      {/* ---------- */}
-      {/* 3. JSX element with children */}
-      <div>
-        <p>Another child</p>
-      </div>
-      {/* ---------- */}
-      {/* 4. JSX element with attributes */}
-      <div role="article" id="foo" />
-      {/* ----------  */}
-  </div>
+      <Selfintroduction name="Kirito" date0fbirth="12 june 1970" hobbies={["Playgame", "Watching TV", "Eat"]} />
+    </div>
   );
 }
 export default App
