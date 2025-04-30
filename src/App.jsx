@@ -7,7 +7,7 @@ const Selfintroduction = ({ name = "unknown", date0fbirth, hobbies }) => {
   return (
     <div>
       <h1>"My name is {name}!"</h1>
-      {date0fbirth ? <h2>I was born in {date0fbirth}</h2> : null}
+      {date0fbirth ? <h2>I was born in {date0fbirth} </h2> : null}
       {hobbies.join("")}
     </div>
   );
